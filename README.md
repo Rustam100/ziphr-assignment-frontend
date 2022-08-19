@@ -34,3 +34,7 @@ npm run lint
 
 - `/` Todos list.
 - `/new` Create new todo.
+
+## Site url
+
+- https://rustam100.github.io/ziphr-assignment-frontend/
