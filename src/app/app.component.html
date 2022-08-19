@@ -4,8 +4,16 @@
       <div>Todo Assignment</div>
       <div class="small text-secondary">by ZipHR</div>
     </a>
-    <a class="btn btn-primary me-2" routerLink="/new">Create</a>
-    <a class="btn btn-primary" routerLink="/">Todos</a>
+    <a class="btn btn-primary me-2" routerLink="/new" routerLinkActive="active"
+      >Create</a
+    >
+    <a
+      class="btn btn-primary"
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Todos</a
+    >
   </div>
 </div>
 

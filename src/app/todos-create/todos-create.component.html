@@ -1,0 +1,50 @@
+<!-- Header -->
+<div class="page-header">
+  <!-- Title -->
+  <div class="fw-bold">Create todo</div>
+</div>
+
+<!-- Create todo form -->
+<form [formGroup]="createTodoForm" novalidate (ngSubmit)="createTodo()">
+  <div class="form-group">
+    <label>Title</label>
+    <input class="form-control" name="title" formControlName="title" />
+
+    <div class="alert alert-danger"
+      *ngIf="createTodoForm.controls['title'].invalid && createTodoForm.controls['title'].touched">
+      Title is empty
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Date</label>
+    <input type="date" class="form-control" name="date" formControlName="date" />
+
+    <div class="alert alert-danger"
+      *ngIf="createTodoForm.controls['date'].invalid && createTodoForm.controls['date'].touched">
+      Date is empty
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Priority</label>
+    <select class="form-select" formControlName="priority">
+      <option [value]="todoPriority.low">Low</option>
+      <option [value]="todoPriority.normal">Normal</option>
+      <option [value]="todoPriority.high">High</option>
+    </select>
+
+    <div class="alert alert-danger"
+      *ngIf="createTodoForm.controls['priority'].invalid && createTodoForm.controls['priority'].touched">
+      Priority is empty
+    </div>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" [disabled]="createTodoForm.invalid" class="btn btn-success btn-sm ms-auto text-light"
+      title="Create todo">
+      Create
+    </button>
+  </div>
+
+</form>

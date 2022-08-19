@@ -1,0 +1,9 @@
+@import "src/variables";
+
+.ng-touched.ng-invalid{
+  border-color: $danger;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
